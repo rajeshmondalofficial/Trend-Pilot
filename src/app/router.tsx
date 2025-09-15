@@ -6,7 +6,7 @@ import { useAppDispatch } from "@/store";
 import { setAuthSession } from "@/store/slices/auth.slice";
 import type { Session } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 
 const AppRouter = () => {
   const [session, setSession] = useState<Session>();
@@ -37,7 +37,7 @@ const AppRouter = () => {
     // Authenticated Router
     return (
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Navigate to={"/generate-niche"} />} />
         <Route path="/generate-niche" element={<Extractor />} />
       </Routes>
     );
