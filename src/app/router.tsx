@@ -1,4 +1,3 @@
-import Dashboard from "@/features/Protected/Dashbaord";
 import Extractor from "@/features/Protected/Extractor";
 import SignIn from "@/features/SignIn";
 import { supabaseClient } from "@/lib/supabase";
