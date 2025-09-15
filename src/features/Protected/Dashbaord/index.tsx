@@ -5,7 +5,7 @@ import { supabaseClient } from "@/lib/supabase";
 const Dashboard = () => {
   useEffect(() => {
     (async () => {
-      const { data, error } = await supabaseClient.rpc("skill_counts_per_day");
+      const { data } = await supabaseClient.rpc("skill_counts_per_day");
 
       console.log(data);
     })();
